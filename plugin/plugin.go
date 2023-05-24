@@ -77,14 +77,17 @@ func Exec(ctx context.Context, args Args) (err error) {
 
 	// https://docs.drone.io/pipeline/environment/reference/drone-build-status/
 	if args.Build.Status == "success" {
-		title = "Drone CI Build Succeed"
+		title = "Drone CI Run Succeeded"
 	} else {
-		title = "Drone CI Build Failed"
+		title = "Drone CI Run Failed"
 	}
+
+	body := fmt.Sprintf("Project: %s/%s\nBranch:%s\nCommit: %s",
+		args.Repo.Namespace, args.Repo.Name, args.Build.Branch, shortSHA)
 
 	reqBody := BarkRequestBody{
 		Title:     title,
-		Body:      fmt.Sprintf("Project: %s/%s Commit: %s", args.Repo.Namespace, args.Repo.Name, shortSHA),
+		Body:      body,
 		Icon:      args.Icon,
 		Group:     args.Group,
 		Url:       args.Pipeline.Build.Link,
