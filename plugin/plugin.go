@@ -82,7 +82,7 @@ func Exec(ctx context.Context, args Args) (err error) {
 		title = "Drone CI Run Failed"
 	}
 
-	body := fmt.Sprintf("Project: %s/%s\nBranch:%s\nCommit: %s",
+	body := fmt.Sprintf("Project: %s/%s\nBranch: %s\nCommit: %s",
 		args.Repo.Namespace, args.Repo.Name, args.Commit.Branch, shortSHA)
 
 	reqBody := BarkRequestBody{
