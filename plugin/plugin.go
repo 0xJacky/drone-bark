@@ -83,7 +83,7 @@ func Exec(ctx context.Context, args Args) (err error) {
 	}
 
 	body := fmt.Sprintf("Project: %s/%s\nBranch:%s\nCommit: %s",
-		args.Repo.Namespace, args.Repo.Name, args.Build.Branch, shortSHA)
+		args.Repo.Namespace, args.Repo.Name, args.Commit.Branch, shortSHA)
 
 	reqBody := BarkRequestBody{
 		Title:     title,
