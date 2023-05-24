@@ -3,7 +3,7 @@ type: docker
 name: default
 
 steps:
-- name: Build and publish
+- name: build and publish
   image: thegeeklab/drone-docker-buildx:23
   privileged: true
   settings:

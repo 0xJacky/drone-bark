@@ -27,7 +27,7 @@ steps:
   settings:
     server_url: foo
     bark_device: 
-      from_secret: bar
+      from_secret: bark_device
     icon: foobar
     bark_group: Drone CI
     bark_level: active
