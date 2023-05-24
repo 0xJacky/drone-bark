@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: Build and publish
+  image: plugins/docker
+  settings:
+    repo: uozi/drone-bark
+    auto_tag: true
+    dockerfile: Dockerfile
+    platform: linux/amd64, linux/arm64, linux/arm/v7, linux/arm/v6
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password

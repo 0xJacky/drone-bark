@@ -1,0 +1,6 @@
+name: drone-bark
+main: main.go
+version: 1.0
+run:
+  go:
+    module: github.com/0xJacky/drone-bark
