@@ -1,4 +1,7 @@
+# Drone-bark
 A plugin to Drone plugin for sending Bark notifications.
+
+![Screenshot](screenshot.jpg)
 
 # Usage
 
