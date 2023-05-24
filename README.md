@@ -24,7 +24,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: run 0xJacky/drone-bark plugin
+- name: notify
   image: 0xJacky/drone-bark
   pull: if-not-exists
   settings:
