@@ -5,6 +5,7 @@ name: default
 steps:
 - name: Build and publish
   image: thegeeklab/drone-docker-buildx:23
+  privileged: true
   settings:
     repo: uozi/drone-bark
     auto_tag: true
